@@ -1,0 +1,154 @@
+.product--main--image{
+    margin-top: 5rem;
+    margin-left: 3rem;
+    width: 357px;
+    height: 50rem;
+    image-resolution: 100%;
+    padding: 0.5rem 0.5rem;
+    border: 0.4rem linear-gradient(45deg, aquamarine, #55BDCA);
+    background-color: white;
+    box-shadow: 0 10px 30px 0 black;
+    justify-content: center;
+    align-items: center;
+    animation: product-load 2000ms;
+    transition: 5000ms;
+}
+
+.no-max-width {
+   max-width: none;
+ }
+
+ .justified-text {
+   text-align: justify;
+   text-justify: inter-word;
+}
+
+.outside-mobile{
+   margin-left: 4rem;
+   margin-right: 2rem;
+}
+
+.product--image--1{
+   margin-left: 2rem;
+}
+
+/*.product--image--3{
+   height: 8rem;
+   width: 20rem;
+   padding-right: 1rem;
+}
+
+.product--image--2, .product--image--4{
+   height: 8rem;
+   width: 10rem;
+   padding-right: 1rem;
+}*/
+
+.text-field{
+   margin-bottom: 4rem;
+}
+
+@keyframes text-load {
+    0%{
+       transform: translateX(100%);
+       opacity: 0%;
+    }
+    
+    100%{
+       transform: translateX(0%);
+       opacity: 100%;
+    }
+}
+
+.product--text--feild {
+   animation: text-load 2000ms;
+   transition: 2000ms;
+}
+ 
+.product--text--feild:hover{
+   background-color: white;
+}
+
+ @keyframes product-load {
+    0%{
+       transform: translateX(-100%);
+       opacity: 0%;
+   } 
+    
+   100%{
+       transform: translateX(0%);
+       opacity: 100%;
+   }
+ }
+
+.product--container{
+   justify-content: space-between;
+    padding: 0rem 0 5rem;
+    overflow: hidden;
+}
+
+.secondary--image:hover{
+    border: 0.4rem linear-gradient(45deg, aquamarine, #55BDCA);
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    transition: 500ms;
+    box-shadow: 0 2.5px 5px rgba(0,0,0,.2);
+    opacity:  70% ;
+}
+
+
+@keyframes produtct-image-load {
+   0%{
+      transform: translateX(100%);
+      opacity: 0%;
+   }
+   
+   100%{
+      transform: translateX(0%);
+      opacity: 100%;
+   }
+}
+
+@media (max-width: 768px) {
+   .product--main--image{
+      margin: 0;
+   }
+
+   .no-max-width {
+      max-width: 100%; /* Set the desired max-width for mobile view */
+   }
+
+   .product--image--1{
+      height: 5rem;
+      width: 5rem;
+      margin-left: 0;
+   }
+
+   .product--image--2{
+      height: 5rem;
+      width: 5rem;
+   }
+
+   
+   .product--image--3{
+      height: 5rem;
+      width: 5rem;
+   }
+   
+   .product--image--4{
+      height: 5rem;
+      width: 5rem;
+   }
+
+   .mobile-centre{
+      text-align: center;
+      margin-left: 2rem;
+      margin-top: 4rem;
+      margin-right: 2rem;
+   }
+
+   .inside-mobile{
+      margin-left: 2rem;
+      margin-right: 2rem;
+   }
+}

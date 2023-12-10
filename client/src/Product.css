@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    @apply font-main;
+    background-color: white;
+}
+.templateContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 2%;
+}
+.templateContainer > .searchInput_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.templateContainer > .searchInput_Container input{
+    width: 50%;
+    padding: 10px;
+    border: 2px solid rgb(26, 35, 126); /* Change the border color */
+    border-radius: 25px;
+    background-color: white; /* Background color for the input */
+    color: #333; /* Text color */
+    font-size: 16px; /* Text size */
+    outline: none; /* Remove the blue outline on focus */
+    transition: border 0.3s;
+}
+.templateContainer > .searchInput_Container input:focus {
+    border: 2px solid #e74c3c; /* Change the border color on focus */
+}
+.template_Container > .searchInput_Container input::placeholder {
+    color: white; /* Placeholder text color */
+}
+  
+.template_Container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Add margin to separate the footer */
+}
+.templateContainer .template_Container .template{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:30px 20px;
+    transition: .2s linear;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.templateContainer .template_Container .template img{
+    height: 10rem;
+}
+.render-text{
+    height: 100vh;
+    text-align: center;
+}
+.templateContainer .template:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+.info--section{
+    padding: 1rem 0 1rem 0 ;
+    font-size: 1rem;
+    justify-content: space-around;
+}
+@media (max-width: 768px) {
+    .templateContainer {
+      justify-content: flex-start; /* Align content to the top on smaller screens */
+    }
+    
+    .template_Container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        max-width: 500px;
+    }
+
+    .templateContainer > .searchInput_Container input{
+        width: 90%;
+    }
+}
